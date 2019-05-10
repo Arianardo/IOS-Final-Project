@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RSA_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YQg-xE-VeD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="JT5-5R-wi5">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use this to encrypt and decrypt number messages using RSA" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Le-cK-Hta">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arC-Un-JWj">
+                                                <rect key="frame" x="0.0" y="132" width="414" height="48"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encrypt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwu-a9-gdg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="207" height="48"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8d-ez-Jrn">
+                                                        <rect key="frame" x="207" y="0.0" width="207" height="48"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <state key="normal" title="Submit"/>
+                                                        <connections>
+                                                            <action selector="displayEncMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N82-7d-prc"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="u8d-ez-Jrn" firstAttribute="width" secondItem="zwu-a9-gdg" secondAttribute="width" id="jSC-CW-eSm"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="meE-nE-omt">
+                                                <rect key="frame" x="0.0" y="240" width="414" height="205"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aFO-VT-H54">
+                                                        <rect key="frame" x="0.0" y="0.0" width="197" height="205"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="displayEncMessage:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="RsA-mx-YKO"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zht-lX-05Z">
+                                                        <rect key="frame" x="217" y="0.0" width="197" height="205"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Zht-lX-05Z" firstAttribute="height" secondItem="aFO-VT-H54" secondAttribute="height" id="K60-5l-dAc"/>
+                                                    <constraint firstItem="Zht-lX-05Z" firstAttribute="width" secondItem="aFO-VT-H54" secondAttribute="width" id="T52-fy-IkI"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w5D-Hq-5xR">
+                                                <rect key="frame" x="0.0" y="505" width="414" height="48"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decrypt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7f-dT-5MB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="207" height="48"/>
+                                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y28-oK-hmY">
+                                                        <rect key="frame" x="207" y="0.0" width="207" height="48"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <state key="normal" title="Submit"/>
+                                                        <connections>
+                                                            <action selector="DecSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ds-st-rtq"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Y28-oK-hmY" firstAttribute="width" secondItem="K7f-dT-5MB" secondAttribute="width" id="LRy-TZ-TuV"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1wo-n0-W1c">
+                                                <rect key="frame" x="0.0" y="613" width="414" height="205"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4j1-z1-HIA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="197" height="205"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="displayDecCipher:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="ZMK-FO-Jha"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dc1-5g-4uc">
+                                                        <rect key="frame" x="217" y="0.0" width="197" height="205"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="4j1-z1-HIA" firstAttribute="height" secondItem="dc1-5g-4uc" secondAttribute="height" id="VYI-vA-mDx"/>
+                                                    <constraint firstItem="4j1-z1-HIA" firstAttribute="width" secondItem="dc1-5g-4uc" secondAttribute="width" id="sGd-vr-hum"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="4j1-z1-HIA" firstAttribute="height" secondItem="Zht-lX-05Z" secondAttribute="height" id="GJW-Ox-Rc6"/>
+                                            <constraint firstItem="4j1-z1-HIA" firstAttribute="width" secondItem="Zht-lX-05Z" secondAttribute="width" id="PMO-L0-lG5"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="JT5-5R-wi5" firstAttribute="leading" secondItem="YQg-xE-VeD" secondAttribute="leading" id="8ME-rz-x8l"/>
+                                    <constraint firstAttribute="trailing" secondItem="JT5-5R-wi5" secondAttribute="trailing" id="c2x-Ud-TeD"/>
+                                    <constraint firstAttribute="bottom" secondItem="JT5-5R-wi5" secondAttribute="bottom" id="gAo-g8-qoW"/>
+                                    <constraint firstItem="JT5-5R-wi5" firstAttribute="top" secondItem="YQg-xE-VeD" secondAttribute="top" id="h0Q-VU-JrT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YQg-xE-VeD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3br-pE-uhc"/>
+                            <constraint firstItem="YQg-xE-VeD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BHv-NT-UgB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YQg-xE-VeD" secondAttribute="trailing" id="Mye-WY-qi7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YQg-xE-VeD" secondAttribute="bottom" id="UGz-eC-bPn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cipherBox" destination="4j1-z1-HIA" id="Uoj-F1-dJR"/>
+                        <outlet property="decCipherBox" destination="dc1-5g-4uc" id="4tK-BH-q5C"/>
+                        <outlet property="encMessageBox" destination="Zht-lX-05Z" id="iGY-MU-9qF"/>
+                        <outlet property="encSubmit" destination="u8d-ez-Jrn" id="3Ka-Xu-7AV"/>
+                        <outlet property="messageBox" destination="aFO-VT-H54" id="Myi-1q-gzP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="102.45535714285714"/>
+        </scene>
+    </scenes>
+</document>
